@@ -8,7 +8,7 @@ format:
     theme: serif
     slide-number: true
     incremental: true
-    logo: "logo.png"
+    logo: "logo.jpg"
     footer: "IA e as Profissões do Futuro"
     css: styles.css
     transition: convex
@@ -518,7 +518,7 @@ plt.show()
 # Obrigado!
 
 **Contacto:** gustavo.reis@ipleiria.pt  
-**Apresentação disponível em:** [link]
+**Apresentação disponível em:** [https://gustavo-reis.github.io/Quarto/ia_profissoes_futuro.html]
 
 ::: {.notes}
 Agradecer a atenção e abrir para perguntas.
