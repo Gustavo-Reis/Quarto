@@ -1,0 +1,526 @@
+---
+title: "IA e as Profissões do Futuro"
+subtitle: "Uma Perspectiva Histórica e Estratégica"
+author: "Gustavo Reis"
+date: "2025-04-02"
+format:
+  revealjs:
+    theme: serif
+    slide-number: true
+    incremental: true
+    logo: "logo.png"
+    footer: "IA e as Profissões do Futuro"
+    css: styles.css
+    transition: convex
+    background-transition: fade
+    width: 1920
+    height: 1080
+    center: true
+
+execute:
+  eval: true
+  echo: false
+  warning: false
+  message: false
+
+jupyter: python3
+---
+
+# Abertura e Contextualização
+
+## Sobre mim
+
+- Formação e experiência profissional
+    - Dotoramento em Inteligência Artificial (Algoritmos Genéticos) 
+    - Professor no IPL:
+        - Inteligência Artificial 
+        - Inteligência Artificial Aplicada aos Jogos
+        - Vários artigos científicos publicados na área da Inteligência Artificial:
+            - Computação Evolutiova
+            - Redes Neuronais
+    - Research Director na Sound Particles
+
+---
+
+- Como a IA transformou a minha própria trajectória?
+- O impacto da IA no meu trabalho
+
+::: {.notes}
+- Falar brevemente sobre minha formação
+- Mencionar projetos recentes com IA
+- Explicar porque este tema é relevante hoje
+:::
+
+. . .
+
+![](transformacao_profissional.png){width="70%"}
+
+# A Grande Transição: Lições da História
+
+## Invenção da Imprensa (séc. XV)
+
+- Escribas → Tipógrafos, Editores, Livreiros
+- Democratização do conhecimento
+- Expansão radical do acesso à informação
+
+. . .
+
+A imprensa criou mais empregos do que eliminou, mas transformou radicalmente a natureza do trabalho.
+
+## Revolução Electrónica (séc. XX)
+
+- Telefonistas → Sistemas automáticos
+- Dactilógrafos → Processamento digital
+- Criação de toda uma nova indústria
+
+. . . 
+
+> "A tecnologia não elimina o trabalho, redefine-o"
+
+# A Natureza Única da Revolução da IA
+
+## O que é diferente desta vez?
+
+- **Velocidade:** Adopção exponencialmente mais rápida
+- **Abrangência:** Afecta sectores intelectuais "seguros"
+- **Autonomia:** Sistemas que aprendem e evoluem
+
+##
+```{python}
+#| echo: false
+#| fig-cap: "Variação na empregabilidade por sector (2023-2028) (Fonte: World Economic Forum, 2023)"
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Dados baseados em projeções do World Economic Forum sobre mudanças no mercado de trabalho
+sectors = pd.DataFrame({
+    'Sector': ['Digital/Tecnologia', 'Saúde', 'Ensino', 'Agricultura', 'Indústria', 'Transportes', 'Retalho'],
+    'Growth_2023_2028': [32, 17, 8, -6, -12, -18, -25]
+})
+
+# Ordenar por crescimento
+sectors = sectors.sort_values('Growth_2023_2028', ascending=False)
+
+# Definir cores baseadas no crescimento (positivo=verde, negativo=vermelho)
+colors = ['#2ecc71' if x >= 0 else '#e74c3c' for x in sectors['Growth_2023_2028']]
+
+# Criar figura
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Criar gráfico de barras
+bars = ax.bar(sectors['Sector'], sectors['Growth_2023_2028'], color=colors)
+
+# Adicionar linha horizontal em y=0
+ax.axhline(y=0, color='black', linestyle='-', linewidth=0.5)
+
+# Adicionar título e labels
+ax.set_title('Variação projetada na empregabilidade por sector (2023-2028)', fontsize=15)
+ax.set_xlabel('Sector', fontsize=12)
+ax.set_ylabel('Variação percentual (%)', fontsize=12)
+
+# Adicionar valores nas barras
+for i, v in enumerate(sectors['Growth_2023_2028']):
+    if v >= 0:
+        ax.text(i, v + 1, f"+{v}%", ha='center', fontsize=10)
+    else:
+        ax.text(i, v - 2, f"{v}%", ha='center', fontsize=10, color='white')
+
+# Ajustar layout
+plt.xticks(rotation=30, ha='right')
+plt.ylim(-30, 40)
+plt.tight_layout()
+plt.show()
+```
+
+##
+```{python}
+#| echo: false
+#| fig-cap: "Tempo para adoção em massa de tecnologias (anos para atingir 50 milhões de utilizadores)"
+
+import seaborn as sns
+
+# Configurar estilo visual
+plt.style.use('seaborn-v0_8-whitegrid')
+
+# Dados reais sobre adoção tecnológica
+# Fonte: Visual Capitalist, baseado em dados da McKinsey e outros
+tech_adoption = pd.DataFrame({
+    'Technology': ['Telefone', 'Televisão', 'Internet', 'Facebook', 'Instagram', 'ChatGPT'],
+    'Years_to_50M_users': [75, 13, 4, 3.5, 2, 0.17]  # Anos para atingir 50 milhões de utilizadores
+})
+
+# Criar figura
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Criar gráfico de barras horizontal
+bars = ax.barh(tech_adoption['Technology'], tech_adoption['Years_to_50M_users'], color='#88bbdd')
+
+# Adicionar degradê de cores das barras (mais antigas para mais recentes)
+colors = plt.cm.Blues(np.linspace(0.4, 0.8, len(tech_adoption)))
+for bar, color in zip(bars, colors):
+    bar.set_color(color)
+
+# Adicionar títulos e labels
+ax.set_title('Anos para atingir 50 milhões de utilizadores', fontsize=15)
+ax.set_xlabel('Anos', fontsize=12)
+ax.set_ylabel('Tecnologia', fontsize=12)
+
+# Adicionar valores nas barras
+for i, v in enumerate(tech_adoption['Years_to_50M_users']):
+    if v < 1:
+        # Converter para meses se for menos de 1 ano
+        months = int(v * 12)
+        label = f"{months} meses"
+    else:
+        label = f"{v:.1f} anos"
+    ax.text(v + 0.5, i, label, va='center')
+
+# Inverter eixo Y para mostrar ordem cronológica
+ax.invert_yaxis()
+
+plt.tight_layout()
+plt.show()
+```
+
+## IA Estreita vs. IA Geral
+
+::: {.columns}
+::: {.column width="50%"}
+### Onde Estamos Hoje
+- IA especializada
+- Visão computacional
+- Processamento de linguagem
+- Reconhecimento de padrões
+:::
+
+::: {.column width="50%"}
+### Para Onde Vamos
+- Sistemas mais versáteis
+- Adaptação a novos contextos
+- Aprendizagem contínua
+- Raciocínio complexo
+:::
+:::
+
+## Percepções Erróneas sobre IA
+
+| Mito | Realidade |
+|------|-----------|
+| "A IA substituirá completamente os humanos" | A IA complementa capacidades humanas, criando novas formas de trabalho híbrido |
+| "A IA só afecta trabalhos repetitivos" | A IA já impacta trabalho criativo, análise complexa e tomada de decisão |
+| "A IA só beneficia grandes empresas de tecnologia" | Ferramentas de IA estão cada vez mais acessíveis a todos os níveis |
+
+# O Mercado de Trabalho em Transformação
+
+## Profissões em Risco ou Transformação
+
+- Análise de dados e relatórios básicos
+- Atendimento ao cliente de primeira linha
+- Tradução e localização básica 
+- Jornalismo factual e geração de conteúdo simples
+- Condução e transporte a longo prazo
+
+##
+
+```{python}
+#| echo: false
+#| fig-cap: "Probabilidade de automação por categoria profissional (Fonte: Oxford Martin School, 2013; PwC, 2018)"
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Dados baseados em estudos reais sobre automação
+# Fonte: Oxford Martin School (Frey & Osborne) e ajustado com dados da PwC
+automation_risk = pd.DataFrame({
+    'Job': ['Operadores de telemarketing', 'Contabilistas', 'Motoristas', 'Recepcionistas', 'Tradutores', 'Analistas financeiros'],
+    'Risk_Percent': [99, 94, 89, 96, 38, 23]
+})
+
+# Ordenar por percentagem de risco
+automation_risk = automation_risk.sort_values('Risk_Percent', ascending=False)
+
+# Definir cores baseadas no risco
+colors = ['#ff4444', '#ff6666', '#ff8888', '#ffaaaa', '#ccddee', '#aaccee']
+
+# Criar gráfico
+fig, ax = plt.subplots(figsize=(10, 6))
+bars = ax.bar(automation_risk['Job'], automation_risk['Risk_Percent'], color=colors)
+
+# Adicionar título e labels
+ax.set_title('Risco de Automação por Profissão (%)', fontsize=15)
+ax.set_xlabel('Profissão', fontsize=12)
+ax.set_ylabel('Probabilidade de Automação (%)', fontsize=12)
+
+# Adicionar valores no topo das barras
+for i, v in enumerate(automation_risk['Risk_Percent']):
+    ax.text(i, v + 1, str(v) + '%', ha='center', fontsize=10)
+
+# Ajustar layout e rotação de labels
+plt.xticks(rotation=30, ha='right')
+plt.ylim(0, 105)
+plt.tight_layout()
+plt.show()
+```
+
+## Profissões em Renovação e Expansão
+
+::: {.columns}
+::: {.column width="50%"}
+### Antes da IA
+- Médico: diagnóstico manual
+- Professor: transmissor de conteúdo
+- Criador: produtor primário
+- Advogado: pesquisador de casos
+:::
+
+::: {.column width="50%"}
+### Com a IA
+- Médico: integrador de diagnóstico + contexto humano
+- Professor: mentor/facilitador personalizado
+- Criador: curador e director estratégico
+- Advogado: consultor de estratégia jurídica
+:::
+:::
+
+## Novas Profissões Emergentes
+
+- **Especialista em ética de IA:** Desenvolve e aplica frameworks éticos para sistemas de IA
+- **Prompt Engineer:** Especializa-se em comunicação eficaz com sistemas de IA
+- **Curador de dados:** Seleciona e refina dados para treino de IA
+- **Designer de experiências humano-IA:** Cria interfaces e fluxos de trabalho colaborativos
+- **Verificador humano:** Valida e melhora outputs de IA
+- **Gestor de sistemas autónomos:** Supervisiona operações de IA em escala
+
+# Case Studies
+
+## Radiologia Transformada
+
+::: {.columns}
+::: {.column width="50%"}
+### Antes
+- 70% do tempo analisando imagens normais
+- Backlog de casos aumentando
+- Fadiga visual e burnout
+- Foco em detecção básica
+:::
+
+::: {.column width="50%"}
+### Agora com IA
+- IA detecta anomalias com precisão >95%
+- Radiologistas focam-se em casos complexos
+- Maior valor em consultoria clínica
+- Tempo para inovação e pesquisa
+:::
+:::
+
+. . .
+
+> Não reduziu empregos, mas transformou a natureza do trabalho
+
+## Indústria Criativa Aumentada
+
+![](designer-ai-tools.png)
+
+- Designers usam IA (Midjourney/DALL-E) para prototipar conceitos
+- Menos tempo em tarefas técnicas, mais em direcção criativa
+- 5x mais variações conceituais no mesmo tempo
+- Democratização de capacidades de visualização
+
+## Experiência Pessoal com IA
+
+- Transformação do meu fluxo de trabalho
+  - Antes: 4 horas/dia em tarefas repetitivas
+  - Agora: 1 hora/dia com assistência de IA
+- Possibilidades antes impraticáveis
+  - Projeto que exigiria equipa de 5 pessoas agora possível com 2 + IA
+  - Democratização de capacidades especializadas
+
+##
+
+```{python}
+#| echo: false
+#| fig-cap: "Produtividade antes e depois da integração de IA (Fonte: Estudo McKinsey, 2023)"
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Dados baseados em relatórios recentes da McKinsey sobre produtividade com IA
+# Fonte: "The Economic Potential of Generative AI", McKinsey Global Institute
+
+# Criação de gráficos de barras duplas para comparação
+labels = ['Redação de Email', 'Análise de Dados', 'Atendimento ao Cliente', 'Pesquisa', 'Criação de Conteúdo']
+sem_ia = [100, 100, 100, 100, 100]  # Base 100 para comparação
+com_ia = [237, 288, 214, 307, 226]  # Percentagem relativa à base
+
+x = np.arange(len(labels))  # Localização dos labels
+width = 0.35  # Largura das barras
+
+fig, ax = plt.subplots(figsize=(12, 6))
+rects1 = ax.bar(x - width/2, sem_ia, width, label='Sem IA', color='#cfcfcf')
+rects2 = ax.bar(x + width/2, com_ia, width, label='Com IA', color='#90ee90')
+
+# Adicionar texto e labels
+ax.set_title('Aumento de Produtividade com IA por Tarefa', fontsize=15)
+ax.set_ylabel('Produtividade Relativa (%)', fontsize=12)
+ax.set_xticks(x)
+ax.set_xticklabels(labels, rotation=30, ha='right')
+ax.legend()
+
+# Anotar valores em cima das barras
+for rect in rects1:
+    height = rect.get_height()
+    ax.annotate(f'{height}%',
+                xy=(rect.get_x() + rect.get_width() / 2, height),
+                xytext=(0, 3),  # 3 pontos de deslocamento vertical
+                textcoords="offset points",
+                ha='center', va='bottom')
+
+for rect in rects2:
+    height = rect.get_height()
+    ax.annotate(f'{height}%',
+                xy=(rect.get_x() + rect.get_width() / 2, height),
+                xytext=(0, 3),  # 3 pontos de deslocamento vertical
+                textcoords="offset points",
+                ha='center', va='bottom')
+
+# Ajustar layout
+ax.set_ylim(0, 350)
+fig.tight_layout()
+plt.show()
+```
+
+# Preparando-se para o Futuro
+
+## Competências-chave para a Era da IA
+
+```{python}
+#| echo: false
+#| fig-cap: "Habilidades mais valorizadas para 2025 (Fonte: World Economic Forum, 'Future of Jobs Report')"
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+# Configurar estilo
+plt.style.use('seaborn-v0_8-whitegrid')
+
+# Dados baseados no relatório "Future of Jobs" do World Economic Forum
+skills = pd.DataFrame({
+    'Skill': ["Pensamento analítico e inovação", 
+              "Aprendizagem ativa e estratégias", 
+              "Resolução de problemas complexos", 
+              "Pensamento crítico", 
+              "Criatividade e iniciativa",
+              "Liderança e influência social",
+              "Uso e monitoramento de tecnologia",
+              "Design e programação de tecnologia",
+              "Resiliência e adaptabilidade",
+              "Raciocínio lógico"],
+    'Importance': [86, 82, 80, 79, 77, 73, 70, 69, 67, 65]
+})
+
+# Ordenar por importância
+skills = skills.sort_values('Importance', ascending=True)
+
+# Criar figura
+fig, ax = plt.subplots(figsize=(10, 8))
+
+# Criar um gradiente de cores
+cmap = plt.cm.Blues
+colors = cmap(np.linspace(0.4, 0.8, len(skills)))
+
+# Criar gráfico de barras horizontal com gradiente
+bars = ax.barh(skills['Skill'], skills['Importance'], color=colors)
+
+# Adicionar títulos e labels
+ax.set_title('Competências-chave para 2025', fontsize=15)
+ax.set_xlabel('Importância Relativa (%)', fontsize=12)
+ax.set_ylabel('Competência', fontsize=12)
+
+# Adicionar valores nas barras
+for i, v in enumerate(skills['Importance']):
+    ax.text(v + 0.5, i, str(v) + '%', va='center', fontsize=10)
+
+# Ajustar limites do eixo x
+ax.set_xlim(0, 95)
+
+plt.tight_layout()
+plt.show()
+```
+
+## Estratégias Práticas para Profissionais
+
+- **"Augment or perish":** Integrar IA nas suas tarefas actuais
+- **Desenvolver experiência híbrida:** Domínio humano + ferramentas de IA
+- **Focar em tarefas genuinamente humanas:** Empatia, ética, criatividade complexa
+- **Experimentar ferramentas de IA:** Especialmente as gratuitas/acessíveis
+- **Treinar pensamento crítico:** Face a outputs de IA
+
+. . .
+
+> "O paradoxo da especialização: quanto mais especializado, mais vulnerável à substituição; quanto mais versátil e interdisciplinar, mais resiliente"
+
+## Três Futuros Possíveis
+
+- Futuro de Substituição
+    - Automação sem compensação (improvável)
+        - Deslocamento massivo de trabalhadores
+        - Concentração extrema de riqueza
+- Futuro de Aumento
+    - Humanos+IA mais produtivos (provável)
+        - Colaboração humano-máquina
+        - Novos modelos de trabalho híbrido
+- Futuro de Transformação
+    - Novas categorias de trabalho (emergente)
+        - Redefinição do conceito de "trabalho"
+        - Economia orientada para valor humano único
+
+## Desafios Societais
+
+- Redistribuição de produtividade e ganhos económicos
+- Requalificação massiva da força de trabalho
+- Novas definições de sucesso profissional
+
+. . .
+
+> "A questão não é se a IA substituirá o seu trabalho, mas se pessoas potenciadas por IA substituirão aquelas sem essas capacidades"
+
+. . .
+
+> "A melhor forma de prever o futuro é criá-lo: torne-se parte activa da revolução da IA"
+
+## Recursos e Próximos Passos
+
+::: {.columns}
+::: {.column width="50%"}
+### Ferramentas para Experimentar
+- Claude.ai
+- ChatGPT
+- Midjourney
+- GitHub Copilot
+- Perplexity.ai
+:::
+
+::: {.column width="50%"}
+### Comunidades de Aprendizagem
+- AI Portugal
+- Portugal AI Masters
+- Meetups locais de IA
+- Fóruns online especializados
+:::
+:::
+
+# Obrigado!
+
+**Contacto:** gustavo.reis@ipleiria.pt  
+**Apresentação disponível em:** [link]
+
+::: {.notes}
+Agradecer a atenção e abrir para perguntas.
+Mencionar disponibilidade para conversar mais sobre o tema.
+:::
