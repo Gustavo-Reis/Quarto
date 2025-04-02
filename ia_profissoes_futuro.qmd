@@ -77,6 +77,32 @@ A imprensa criou mais empregos do que eliminou, mas transformou radicalmente a n
 
 > "A tecnologia não elimina o trabalho, redefine-o"
 
+## Padrões Históricos de Transformação Tecnológica
+
+::: {.columns}
+::: {.column width="50%"}
+### Fase 1: Substituição Inicial
+- Automação de tarefas repetitivas
+- Medo e resistência à mudança
+- Perda de empregos tradicionais
+:::
+
+::: {.column width="50%"}
+### Fase 2: Reinvenção
+- Surgimento de novas profissões
+- Aumento de produtividade global
+- Redefinição de competências-chave
+:::
+:::
+
+. . .
+
+> "A história mostra que, a longo prazo, a tecnologia cria mais empregos do que elimina, mas a transição pode ser dolorosa para quem não se adapta."
+
+::: {.notes}
+Aqui é importante destacar exemplos históricos concretos: a mecanização agrícola diminuiu dramaticamente o número de agricultores, mas criou a classe média moderna através da industrialização.
+:::
+
 # A Natureza Única da Revolução da IA
 
 ## O que é diferente desta vez?
@@ -184,6 +210,33 @@ plt.tight_layout()
 plt.show()
 ```
 
+## O Ecossistema de IA em Portugal
+
+::: {.columns}
+::: {.column width="60%"}
+### Empresas de Destaque
+- **Feedzai**: Detecção de fraude financeira com IA
+- **Unbabel**: Tradução assistida por IA
+- **Talkdesk**: Soluções de IA para contact centers
+- **Sensei**: Tecnologia para retalho autónomo
+- **Sound Particles**: Processamento de áudio com IA
+- **SISCOG**: Sistemas inteligentes de planeamento e gestão para transportes
+:::
+
+::: {.column width="40%"}
+### Centros de Investigação
+- INESC TEC
+- Instituto de Telecomunicações
+- CISUC (Coimbra)
+- NOVA LINCS (Lisboa)
+- CCG (Guimarães)
+:::
+:::
+
+. . .
+
+> Portugal está bem posicionado para capitalizar a revolução da IA, combinando talento técnico qualificado com custos operacionais competitivos.
+
 ## IA Estreita vs. IA Geral
 
 ::: {.columns}
@@ -211,6 +264,30 @@ plt.show()
 | "A IA substituirá completamente os humanos" | A IA complementa capacidades humanas, criando novas formas de trabalho híbrido |
 | "A IA só afecta trabalhos repetitivos" | A IA já impacta trabalho criativo, análise complexa e tomada de decisão |
 | "A IA só beneficia grandes empresas de tecnologia" | Ferramentas de IA estão cada vez mais acessíveis a todos os níveis |
+
+## Dilemas Éticos da IA no Trabalho
+
+- **Viés e discriminação algorítmica**
+  - Sistemas de RH que perpetuam preconceitos existentes
+  - Decisões enviesadas em aprovação de crédito/emprego
+
+. . .
+
+- **Privacidade e vigilância**
+  - Monitorização excessiva de colaboradores
+  - Recolha de dados sem consentimento informado
+
+. . .
+
+- **Transparência e explicabilidade**
+  - "Caixas negras" tomando decisões críticas
+  - Responsabilidade por decisões automatizadas
+
+. . .
+
+- **Distribuição equitativa dos benefícios**
+  - Concentração de ganhos em empresas vs. trabalhadores
+  - Estratégias para partilha de produtividade
 
 # O Mercado de Trabalho em Transformação
 
@@ -285,6 +362,32 @@ plt.show()
 :::
 :::
 
+## Anatomia da Transformação: O Caso dos Criadores
+
+::: {.columns}
+::: {.column width="50%"}
+### Criador como produtor primário
+- Responsável por todo o processo criativo desde o início
+- Tempo significativo dedicado à execução técnica
+- Número limitado de iterações e experimentações
+- Valor baseado na habilidade técnica de execução
+- Ex: Designer criando manualmente cada esboço
+:::
+
+::: {.column width="50%"}
+### Criador como curador estratégico
+- Define visão e direção criativa
+- Utiliza IA para gerar múltiplas variações
+- Seleciona, refina e personaliza outputs da IA
+- Valor baseado em julgamento estético e contexto
+- Ex: Designer usando DALL-E para explorar conceitos, depois refinando
+:::
+:::
+
+. . .
+
+> "A IA não substitui a criatividade humana, mas amplifica-a dramaticamente, permitindo explorar um espaço criativo muito maior"
+
 ## Novas Profissões Emergentes
 
 - **Especialista em ética de IA:** Desenvolve e aplica frameworks éticos para sistemas de IA
@@ -293,6 +396,18 @@ plt.show()
 - **Designer de experiências humano-IA:** Cria interfaces e fluxos de trabalho colaborativos
 - **Verificador humano:** Valida e melhora outputs de IA
 - **Gestor de sistemas autónomos:** Supervisiona operações de IA em escala
+
+## Novas Profissões (Previsão para 2030)
+
+- **Designer de personalidades para IA:** Cria perfis personalizados e características para assistentes de IA
+- **Conselheiro em privacidade de IA:** Ajuda indivíduos a gerir sua interação e dados com sistemas de IA
+- **Gestor de diversidade algorítmica:** Assegura que sistemas de IA são inclusivos e representativos
+- **Terapeuta de relação humano-IA:** Ajuda pessoas a desenvolver relações saudáveis com tecnologia
+- **Arqueólogo de dados:** Recupera e contextualiza dados históricos para treino de IA
+
+. . .
+
+> "Muitas das profissões de 2035 ainda não têm nome hoje. A capacidade de imaginar e criar essas novas funções será tão valiosa quanto desempenhar as existentes."
 
 # Case Studies
 
@@ -393,6 +508,30 @@ fig.tight_layout()
 plt.show()
 ```
 
+## IA e Educação: Transformando o Aprendizado
+
+::: {.columns}
+::: {.column width="60%"}
+### Novas Possibilidades
+- **Personalização adaptativa:** Material ajustado ao ritmo individual
+- **Feedback imediato:** Avaliação automática com orientações específicas
+- **Professores potenciados:** Mais tempo para interação de alto valor
+- **Democratização do conhecimento:** Acesso a educação de qualidade independente da localização
+:::
+
+::: {.column width="40%"}
+### Desafios
+- Garantir equidade de acesso
+- Manter a conexão humana
+- Desenvolver pensamento crítico
+- Evitar "caixas-pretas" educacionais
+:::
+:::
+
+. . .
+
+> "A IA no ensino não substitui professores, mas redefine seu papel para o que sempre deveria ter sido: mentores inspiradores ao invés de transmissores de informação"
+
 # Preparando-se para o Futuro
 
 ## Competências-chave para a Era da IA
@@ -465,6 +604,54 @@ plt.show()
 
 > "O paradoxo da especialização: quanto mais especializado, mais vulnerável à substituição; quanto mais versátil e interdisciplinar, mais resiliente"
 
+## Roadmap para Adaptação Profissional
+
+::: {.incremental}
+1. **Autoavaliação (1-3 meses)**
+   - Identifique quais partes do seu trabalho são mais automatizáveis
+   - Mapeie suas competências exclusivamente humanas
+   
+2. **Experimentação (3-6 meses)**
+   - Teste diferentes ferramentas de IA relevantes para sua área
+   - Documente ganhos de produtividade e novas possibilidades
+   
+3. **Integração (6-12 meses)**
+   - Reestruture seus fluxos de trabalho para incluir IA
+   - Comunique valor adicional aos stakeholders
+   
+4. **Especialização Estratégica (12+ meses)**
+   - Desenvolva competência em nicho específico complementar à IA
+   - Construa portfólio de projetos "aumentados por IA"
+:::
+
+## Um Dia em 2035: Arquiteta Aumentada por IA
+
+::: {.columns}
+::: {.column width="50%"}
+**09:00** - Reunião com cliente via holografia. IA de suporte traduz e resume em tempo real.
+
+**10:30** - Esboça conceito básico que IA transforma em 50 variações renderizadas.
+
+**12:00** - Almoço enquanto IA realiza análises de conformidade e sustentabilidade.
+
+**14:00** - Seleciona design final. IA executa modelagem técnica completa.
+:::
+
+::: {.column width="50%"}
+**15:30** - Revisão com engenheiros - IA simula comportamento estrutural.
+
+**16:30** - Refinamento de elementos artísticos humanos que diferenciam o projeto.
+
+**17:30** - IA prepara documentação durante a noite.
+
+**Valor humano:** Visão criativa, negociação interpessoal, julgamento estético, contexto cultural.
+:::
+:::
+
+. . .
+
+O que antes levava meses agora é feito em dias, mas o elemento humano permanece como diferenciador essencial.
+
 ## Três Futuros Possíveis
 
 - Futuro de Substituição
@@ -515,10 +702,36 @@ plt.show()
 :::
 :::
 
+## Livros e Recursos Recomendados
+
+::: {.columns}
+::: {.column width="50%"}
+### Livros Essenciais
+- "AI Superpowers" - Kai-Fu Lee
+- "Human + Machine" - Accenture
+- "The Age of AI" - Henry Kissinger et al.
+- "Atlas of AI" - Kate Crawford
+- "Life 3.0" - Max Tegmark
+:::
+
+::: {.column width="50%"}
+### Recursos Online
+- Curso "AI For Everyone" (Coursera)
+- Microsoft Learn AI Fundamentals
+- Google AI Experiments
+- Distill.pub (visualizações de ML)
+- Papers With Code
+:::
+:::
+
+. . .
+
+> "A literacia em IA será tão fundamental no século XXI como a literacia básica foi no século XX"
+
 # Obrigado!
 
-**Contacto:** gustavo.reis@ipleiria.pt  
-**Apresentação disponível em:** [https://gustavo-reis.github.io/Quarto/ia_profissoes_futuro.html]
+**Contacto:** [gustavo.reis@ipleiria.pt](mailto:gustavo.reis@ipleiria.pt)  
+**Apresentação disponível em:** [https://gustavo-reis.github.io/Quarto/ia_profissoes_futuro.html](https://gustavo-reis.github.io/Quarto/ia_profissoes_futuro.html)
 
 ::: {.notes}
 Agradecer a atenção e abrir para perguntas.
